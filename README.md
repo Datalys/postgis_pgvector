@@ -2,13 +2,12 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[![Push to Docker Hub](https://github.com/joshuasundance-swca/postgis_pgvector/actions/workflows/docker-hub.yml/badge.svg)](https://github.com/joshuasundance-swca/postgis_pgvector/actions/workflows/docker-hub.yml)
-[![postgis_pgvector on Docker Hub](https://img.shields.io/docker/v/joshuasundance/postgis_pgvector?label=postgis_pgvector&logo=docker)](https://hub.docker.com/r/joshuasundance/postgis_pgvector)
-[![Docker Image Size (tag)](https://img.shields.io/docker/image-size/joshuasundance/postgis_pgvector/latest)](https://hub.docker.com/r/joshuasundance/postgis_pgvector)
+[![Push to Docker Hub](https://github.com/datalys/postgis_pgvector/actions/workflows/docker-hub.yml/badge.svg)](https://github.com/datalys/postgis_pgvector/actions/workflows/docker-hub.yml)
+[![postgis_pgvector on Docker Hub](https://img.shields.io/docker/v/analyzedirect/postgis_pgvector?label=postgis_pgvector&logo=docker)](https://hub.docker.com/r/analyzedirect/postgis_pgvector)
+[![Docker Image Size (tag)](https://img.shields.io/docker/image-size/analyzedirect/postgis_pgvector/latest)](https://hub.docker.com/r/analyzedirect/postgis_pgvector)
 
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-![Known Vulnerabilities](https://snyk.io/test/github/joshuasundance-swca/postgis_pgvector/badge.svg)
-
+![Known Vulnerabilities](https://snyk.io/test/github/datalys/postgis_pgvector/badge.svg)
 
 🤖 This `README` was written by GPT-4. 🤖
 
@@ -19,15 +18,14 @@ This project focuses on creating a Docker image that combines the functionalitie
 - `PostGIS`: An extension to PostgreSQL that allows it to store spatial data and perform spatial operations.
 - `pgvector`: An extension for PostgreSQL designed for efficient similarity search in high dimensional vector spaces.
 
-
 ### Dockerfile
 The `Dockerfile` starts with the `postgis/postgis:18-3.6` image and installs essential packages including build tools, PostgreSQL server development tools, and `git`. It then clones and installs pgvector. The Dockerfile is optimized to reduce the layer size by cleaning up after installations.
 
 ### docker-compose.yml
 `docker-compose.yml` sets up two services:
 
-- `postgis_pgvector`: Builds the Docker image from the provided Dockerfile and sets up a volume for data persistence. It also configures the environment for PostgreSQL.
-- `pgadmin`: Uses the `dpage/pgadmin4:7.8` image for database management through a web interface. It also sets up a volume for pgAdmin data.
+- `postgis_pgvector`: Builds the `analyzedirect/postgis_pgvector` Docker image from the provided Dockerfile and sets up a volume for data persistence. It also configures the environment for PostgreSQL.
+- `pgadmin`: Uses the `dpage/pgadmin4:9.14` image for database management through a web interface. It also sets up a volume for pgAdmin data.
 
 ## Usage
 - **Build and Run**: Use `docker compose up` to build the image and run the containers.
