@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - '*.*.*'
+  workflow_dispatch: # Adds the manual trigger button
 
 jobs:
   build-and-push-docker:
