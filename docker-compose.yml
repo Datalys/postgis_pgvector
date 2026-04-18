@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   postgis_pgvector:
-    image: datalys/postgis_pgvector:1.0.0
+    image: analyzedirect/postgis_pgvector:latest
     container_name: postgis_pgvector
     build:
       context: .
@@ -19,7 +19,8 @@ services:
 
   pgadmin:
     container_name: pgadmin
-    image: dpage/pgadmin4:7.8
+    # Updated to the latest v9.14 image
+    image: dpage/pgadmin4:9.14
     ports:
       - "80:80"
     environment:
