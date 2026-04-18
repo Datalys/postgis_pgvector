@@ -14,4 +14,4 @@ push = true
 "bumpver.toml" = [
     'current_version = "{version}"',
 ]
-"docker-compose.yml" = ["#    image: joshuasundance/postgis_pgvector:{version}"]
+"docker-compose.yml" = ["#    image: datalys/postgis_pgvector:{version}"]
