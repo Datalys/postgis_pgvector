@@ -23,8 +23,8 @@ jobs:
     - name: Build Docker image
       run: |
         docker build \
-          -t datalys/postgis_pgvector:${{ github.ref_name }} \
-          -t datalys/postgis_pgvector:latest \
+          -t analyzedirect/postgis_pgvector:${{ github.ref_name }} \
+          -t analyzedirect/postgis_pgvector:latest \
           .
 
     - name: Push to Docker Hub
